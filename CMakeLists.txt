@@ -1,0 +1,88 @@
+cmake_minimum_required(VERSION 3.16)
+project(Projet_Micro_INFO1 C)
+
+set(CMAKE_C_STANDARD 11)
+
+include_directories(Libraries/CM3/CoreSupport)
+include_directories(Libraries/CM3/DeviceSupport/NXP/LPC17xx)
+include_directories(Libraries/LCP1768_StdPeriph_Driver/include)
+include_directories(Project)
+include_directories(Project/RTE)
+include_directories(Project/RTE/_Open1786)
+include_directories(User)
+include_directories(User/touch)
+
+add_executable(Projet_Micro_INFO1
+        Libraries/CM3/CoreSupport/core_cm3.c
+        Libraries/CM3/CoreSupport/core_cm3.h
+        Libraries/CM3/CoreSupport/core_cmFunc.h
+        Libraries/CM3/CoreSupport/core_cmInstr.h
+        Libraries/CM3/DeviceSupport/NXP/LPC17xx/LPC17xx.h
+        Libraries/CM3/DeviceSupport/NXP/LPC17xx/system_LPC17xx.c
+        Libraries/CM3/DeviceSupport/NXP/LPC17xx/system_LPC17xx.h
+        Libraries/LCP1768_StdPeriph_Driver/include/debug_frmwrk.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_adc.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_can.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_clkpwr.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_dac.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_emac.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_exti.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_gpdma.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_gpio.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_i2c.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_i2s.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_libcfg_default.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_mcpwm.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_nvic.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_pinsel.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_pwm.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_qei.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_rit.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_rtc.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_spi.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_ssp.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_systick.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_timer.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_uart.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc17xx_wdt.h
+        Libraries/LCP1768_StdPeriph_Driver/include/lpc_types.h
+        Libraries/LCP1768_StdPeriph_Driver/source/debug_frmwrk.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_adc.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_can.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_clkpwr.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_dac.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_emac.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_exti.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_gpdma.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_gpio.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_i2c.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_i2s.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_libcfg_default.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_mcpwm.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_nvic.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_pinsel.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_pwm.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_qei.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_rit.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_rtc.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_spi.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_ssp.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_systick.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_timer.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_uart.c
+        Libraries/LCP1768_StdPeriph_Driver/source/lpc17xx_wdt.c
+        Project/RTE/_Open1786/RTE_Components.h
+        User/touch/english_16x8.c
+        User/touch/ili_lcd_general.c
+        User/touch/ili_lcd_general.h
+        User/touch/isr_touch.c
+        User/touch/lcd_api.c
+        User/touch/lcd_api.h
+        User/touch/touch_panel.c
+        User/touch/touch_panel.h
+        User/affichagelcd.c
+        User/affichagelcd.h
+        User/constantes.h
+        User/global.h
+        User/globaldec.h
+        User/main.c)

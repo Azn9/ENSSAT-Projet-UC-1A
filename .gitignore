@@ -1,0 +1,5 @@
+*.pdf
+cmake-build-debug
+Project/Project.uvgui.*
+Project/Output
+.idea
